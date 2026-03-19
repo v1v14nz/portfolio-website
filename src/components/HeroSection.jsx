@@ -1,4 +1,4 @@
-import profilePic from '../assets/profile-pic.jpg'
+import profilePic from '../assets/pusheen.png'
 
 function HeroSection() {
   return (
