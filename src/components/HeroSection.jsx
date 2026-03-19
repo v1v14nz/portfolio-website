@@ -6,12 +6,12 @@ function HeroSection() {
       <div className="relative z-10">
          
         <h1 className="mt-5 max-w-3xl text-4xl font-black leading-tight text-[#3A405A] md:text-6xl">
-          Hi, I&apos;m [Your Name].
-          <span className="hero-accent-text"> I&apos;m a [Your Role].</span>
+          Hi, I&apos;m Vivian
+          <span className="hero-accent-text"> a UW CE student</span>
         </h1>
 
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-[#685044] md:text-lg">
-          Replace this with 2-3 lines about your focus, interests, and the impact you want to create in engineering.
+          I'm a computer engineering student with a passion for blah blah blah
         </p>
 
         <div className="mt-8 flex flex-wrap gap-3">

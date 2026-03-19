@@ -1,17 +1,24 @@
 const experiences = [
   {
-    role: '[Role Title]',
-    company: '[Company / Organization]',
-    period: '[Month Year - Month Year]',
+    role: 'IT Project and Assessment Assistant',
+    company: 'University of Waterloo School of Pharmacy',
+    period: 'jan 2026 - apr 2026',
     summary:
-      'Add 1-2 lines about what you built, owned, or improved in this role.',
+      'Provided IT support to faculty, staff, and students, troubleshooting hardware, software, network, and AV issues while managing service tickets. \n Assisted with program assessments by developing surveys, analyzing data, preparing visual reports, and providing on-site technical support during exams and review processes. \n Microsoft 365, Teams, Webex, Zoom, LEARN, and ExamSoft',
   },
   {
-    role: '[Role Title]',
-    company: '[Company / Organization]',
-    period: '[Month Year - Present]',
+    role: 'Firmware Developer',
+    company: 'Electrium Mobility',
+    period: 'sept 2025 - present',
     summary:
-      'Add impact details here, such as outcomes, metrics, or technologies used.',
+      'Developed firmware for Electrium Mobility e-bike project using VESC software, enhancing motor control and system reliability.\n Developed VESC software for electric human powered vehicle(EHPV).',
+  },
+  {
+    role: 'President',
+    company: 'Bloom & Seal, JA Company',
+    period: 'oct 2024 - jun 2026',
+    summary:
+      'Presented and interviewed questions regarding the company to a crowd of over 1,000 people at the Business Laureates of BC Gala.\n Managed our social media, creating short-form content and posts and gaining over 2,000 views and attracting users towards our product.\n Organized and motivated a team to work together to make our business a success.\n Learned HTML and CSS to create a website for the company (<a href="https://bloom-seal.netlify.app/">).\n Finalist of CIBC Company of the Year Award 2025',
   },
 ]
 
