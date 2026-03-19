@@ -1,173 +1,233 @@
 # Women in Engineering Portfolio Workshop
 
-Welcome. This repo is a beginner-friendly template for the Women in Engineering portfolio workshop.
+Welcome! This template is made for the **Women in Engineering Portfolio Workshop** where you build your own portfolio and deploy it live.
 
-You will customize placeholder content, personalize colors, and deploy your site.
+You do **not** need to be an expert coder to complete this.
 
-## What You Are Building
+---
 
-A one-page portfolio with these sections:
+## What you are building
 
-- Hero
-- About
-- Experience (with resume download button)
-- Projects
-- Contact
+You are creating a one-page personal portfolio with:
+
+- Hero section (your intro)
+- About section
+- Projects section
+- Contact section
 
 Tech stack:
 
 - React + Vite
 - Tailwind CSS
-- Vercel (deployment)
+- Vercel for deployment
 
-## Current Color Palette
+---
 
-This template currently uses:
+## Before you start
 
-- #3A405A (primary text / dark accent)
-- #AEC5EB (borders / cool accent)
-- #F9DEC9 (light card backgrounds)
-- #E9AFA3 (hover and warm accents)
-- #685044 (secondary text / dark warm accent)
+Please install:
 
-## Setup
+1. [Node.js](https://nodejs.org/) (version 20+ recommended)
+2. [VS Code](https://code.visualstudio.com/)
+3. A GitHub account
+4. A Vercel account (you can sign in with GitHub)
 
-Install first:
+To check Node and npm in your terminal:
 
-1. Node.js (v20+ recommended)
-2. Git
-3. VS Code
-4. GitHub account
-5. Vercel account
+```bash
+node -v
+npm -v
+```
 
-### 1. Clone the repository
+If both show version numbers, you’re good.
 
-Choose where you want the project folder, then run:
+To clone this repo:
 
 ```bash
 git clone <your-repo-url>
 cd portfolio-website
 ```
 
-If you already have the project folder locally, just `cd` into it.
+Replace `<your-repo-url>` with your GitHub repository URL.
 
-### 2. Check your versions
+---
 
-```bash
-node -v
-npm -v
-git --version
-```
+## Quick start (copy and paste)
 
-### 3. Install dependencies
+In terminal, from this project folder:
 
 ```bash
 npm install
+npm run dev
 ```
 
-### 4. Start the development server
+Then open the URL shown in terminal (usually `http://localhost:5173`).
+
+---
+
+## File guide (the only files you really need)
+
+- `src/App.jsx` → main content on the page
+- `src/index.css` → global styles + Tailwind import
+- `README.md` → this guide
+
+---
+
+## Beginner editing guide (no stress version)
+
+### 1) Update your name + intro
+
+Open `src/App.jsx` and find the top section.
+
+Replace:
+
+- `YOUR NAME`
+- headline text
+- intro paragraph
+
+### 1.5) Add your profile photo
+
+In the hero section, there is a placeholder circle that says `Add Profile Photo`.
+
+Replace that placeholder with an `<img />` tag once you have a photo URL, or keep it as-is during the workshop.
+
+Tip: Keep your intro to 2–3 lines.
+
+### 2) Update About section
+
+In `About Me`, write:
+
+- What you study/work on
+- What interests you in engineering/tech
+- What opportunities you’re looking for
+
+### 3) Update project cards
+
+At the top of `src/App.jsx`, edit the `projects` array.
+
+Each project has:
+
+- `title`
+- `description`
+- `tech`
+
+If you only have 1–2 projects, that’s totally okay.
+
+### 4) Update contact section
+
+Add your:
+
+- email
+- LinkedIn
+- GitHub (if you have one)
+
+---
+
+## Optional customizations (easy wins)
+
+In `src/App.jsx`, you can change colors quickly by replacing class names like:
+
+- `slate-*`
+- `zinc-*`
+- `neutral-*`
+
+Examples:
+
+- `bg-slate-900` → `bg-zinc-900`
+- `text-slate-600` → `text-neutral-600`
+
+---
+
+## If you are totally new to coding
+
+Use this pattern:
+
+1. Change one small line.
+2. Save the file.
+3. Refresh browser and check result.
+4. If something breaks, undo (`Cmd + Z`).
+
+That’s it. Small edits are the safest path.
+
+---
+
+## Build check before deploy
+
+Run:
+
+```bash
+npm run build
+```
+
+If this passes, you’re ready to deploy.
+
+---
+
+## Deploy to Vercel (recommended path)
+
+### Step A — Push to GitHub
+
+If you haven’t already:
+
+```bash
+git add .
+git commit -m "workshop portfolio"
+git push
+```
+
+### Step B — Import in Vercel
+
+1. Go to [https://vercel.com](https://vercel.com)
+2. Click **Add New Project**
+3. Import your GitHub repo
+4. Keep defaults (Vercel detects Vite)
+5. Click **Deploy**
+
+Expected values:
+
+- Framework Preset: `Vite`
+- Build Command: `npm run build`
+- Output Directory: `dist`
+
+---
+
+## Troubleshooting
+
+### Problem: `npm install` fails
+
+Try:
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### Problem: Dev server won’t start
+
+Close old terminals and run:
 
 ```bash
 npm run dev
 ```
 
-Open the local URL shown in terminal (usually http://localhost:5173).
+### Problem: Styles are missing
 
-### 5. Optional: Build check
+Check:
 
-```bash
-npm run build
-```
+- `vite.config.js` contains `@tailwindcss/vite`
+- `src/index.css` contains `@import 'tailwindcss';`
+- `src/main.jsx` imports `./index.css`
 
-## File Guide
+---
 
-Main files participants will edit:
-
-- src/components/Header.jsx
-- src/components/HeroSection.jsx
-- src/components/AboutSection.jsx
-- src/components/ExperienceSection.jsx
-- src/components/ProjectsSection.jsx
-- src/components/ContactSection.jsx
-- src/data/projects.js
-- src/index.css
-
-Page assembly happens in:
-
-- src/App.jsx
-
-## Workshop Editing Guide
-
-1. Update name and hero intro
-
-- Edit text in src/components/Header.jsx and src/components/HeroSection.jsx.
-- Replace [Your Name], [Your Role], and the intro paragraph.
-
-2. Add profile image
-
-- Replace src/assets/profile-pic.jpg with your photo (same filename), or update the import path in src/components/HeroSection.jsx.
-
-3. Update About section
-
-- Edit src/components/AboutSection.jsx with 3-5 sentences about your interests and goals.
-
-4. Update Experience section
-
-- Edit the experiences array in src/components/ExperienceSection.jsx.
-- Add your internship, leadership, volunteering, or research details.
-
-5. Add your resume
-
-- Put your PDF at public/resume.pdf.
-- The Download Resume button in src/components/ExperienceSection.jsx already links to this path.
-
-6. Update Projects
-
-- Edit src/data/projects.js.
-- Each project includes title, description, and tech.
-
-7. Update Contact
-
-- Edit src/components/ContactSection.jsx with your email and links.
-
-## Build And Deploy
-
-Build check:
-
-npm run build
-
-Deploy with Vercel:
-
-1. Push your repo to GitHub.
-2. Import the repo into Vercel.
-3. Use defaults for a Vite app.
-4. Deploy.
-
-Expected values:
-
-- Framework Preset: Vite
-- Build Command: npm run build
-- Output Directory: dist
-
-## Troubleshooting
-
-If npm install fails:
-
-rm -rf node_modules package-lock.json
-npm install
-
-If styles are missing, verify:
-
-- src/index.css includes @import 'tailwindcss';
-- src/main.jsx imports ./index.css
-- vite.config.js includes the Tailwind Vite plugin
-
-## Suggested Workshop Pacing
+## Suggested workshop pacing (for mentors)
 
 - 10 min: setup + run locally
-- 20 min: hero + about
-- 20 min: experience + projects
-- 10 min: contact + final polish
-- 10 min: deploy + share links
+- 20 min: hero/about/contact
+- 20 min: project cards + styling
+- 10 min: GitHub push
+- 10 min: Vercel deploy + share links
 
-Ship your portfolio. Keep it real, personal, and proudly yours.
+---
+
+You belong in engineering spaces. Ship your site and be proud of it.
